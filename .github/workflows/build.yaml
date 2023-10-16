@@ -16,3 +16,10 @@ jobs:
         with:
           esp_idf_version: v5.1.1
           target: esp32
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          path: |
+            build/bootloader/bootloader.bin
+            build/partition_table/partition-table.bin
+            build/hello_world.bin
